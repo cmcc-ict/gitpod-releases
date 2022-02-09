@@ -67,10 +67,10 @@ jobs:
             // If we already created the release branch in openvscode-server, don't create a notification
             return releaseBranch ? false : true;
 
-      - name: onemessage robot message
-        if: steps.new-release.outputs.result == 'true'
-        uses: cmcc-ict/onemessage-notify-action@master
-        with:
-          url: http://117.132.184.53:9005/room/pushToRobot
-          robotKey: ${{ secrets.ROBOT_KEY}}
-          msg : 'New vscode release branch created\nStart preparing for a new release :exclamation:' 
+#      - name: onemessage robot message
+#        if: steps.new-release.outputs.result == 'true'
+#        uses: cmcc-ict/onemessage-notify-action@master
+#        with:
+#          url: http://117.132.184.53:9005/room/pushToRobot
+#          robotKey: ${{ secrets.ROBOT_KEY}}
+#          msg : 'New vscode release branch created\nStart preparing for a new release :exclamation:' 
