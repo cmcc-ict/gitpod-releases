@@ -297,10 +297,10 @@ jobs:
             RELEASE_ORG=${{ github.repository_owner }}
           tags: ${{ steps.meta.outputs.tags }}
 
-      - name: onemessage Notification
-        if: always()
-        uses: cmcc-ict/onemessage-notify-action@master
-        with:
-          url: http://117.132.184.53:9005/room/pushToRobot
-          robotKey: ${{ secrets.ROBOT_KEY}}
-          msg : 'Relase docker ${{ job.status }}'   
+#      - name: onemessage Notification
+#        if: always()
+#        uses: cmcc-ict/onemessage-notify-action@master
+#        with:
+#          url: http://117.132.184.53:9005/room/pushToRobot
+#          robotKey: ${{ secrets.ROBOT_KEY}}
+#          msg : 'Relase docker ${{ job.status }}'   
